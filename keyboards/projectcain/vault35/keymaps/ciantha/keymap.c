@@ -17,22 +17,6 @@
 #include QMK_KEYBOARD_H
 #include "ciantha.h"
 
-//shorter names for home ROWs and layers
-#define HRM_Z RGUI_T(KC_Z)
-#define HRM_S LALT_T(KC_S)
-#define HRM_D LSFT_T(KC_D)
-#define HRM_F LCTL_T(KC_F)
-#define HRM_J RCTL_T(KC_J)
-#define HRM_K RSFT_T(KC_K)
-#define HRM_L LALT_T(KC_L)
-#define HRM_DOT LGUI_T(KC_DOT)
-#define LT_A LT(NAV, KC_A)
-#define LT_BSPC LT(NUM, KC_BSPC)
-#define COPY C(KC_C)
-#define PASTE C(KC_V)
-#define CUT C(KC_X)
-#define UNDO C(KC_Z)
-
 //layer names
 enum layers{
   BASE,
