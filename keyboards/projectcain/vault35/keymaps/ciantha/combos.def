@@ -1,0 +1,13 @@
+//   name     result    chord keys
+COMB(c_ESC,    KC_ESC,    KC_Q, KC_W)
+COMB(c_DEL,    KC_DEL,    KC_Q, KC_E)
+COMB(c_TAB,    KC_TAB,    HRM_S, HRM_D)
+COMB(c_QUOT,   KC_QUOT,   KC_U, KC_I)
+COMB(c_DQUOT,  KC_DQT,    KC_U, KC_I, KC_O)
+COMB(c_AA,     KC_AA,     KC_O, KC_P)
+COMB(c_AE,     KC_AE,     HRM_L, KC_OE)
+COMB(c_ENT,    KC_ENT,    HRM_K, HRM_L, KC_OE)
+COMB(c_QUEST,  KC_QUES,   KC_M, KC_COMM)
+COMB(c_SLASH,  KC_SLASH,  KC_COMM, HRM_DOT)
+COMB(c_CAPSW,  CW_TOGG,   HRM_D, HRM_K)
+
