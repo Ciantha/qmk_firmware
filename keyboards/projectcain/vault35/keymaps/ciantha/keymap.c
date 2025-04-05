@@ -30,10 +30,7 @@ typedef struct {
 //set handedness for chordal hold
 const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
     LAYOUT_ciantha_11u_6_thumb_keys(
-        'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'R',  
-          'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 
-            'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 
-                       '*', '*', '*',  '*', '*', '*'
+      ___CHORDAL_11u6t_stag___
     );
 
 //actual keymap
