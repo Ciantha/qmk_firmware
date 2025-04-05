@@ -36,6 +36,7 @@
         "editor.formatOnSave": false
     },
     "clangd.arguments": ["--header-insertion=never"],
+    "C_Cpp.errorSquiggles": "disabled",
     "json.schemas": [
         {
             "fileMatch": ["qmk.json"],
@@ -53,5 +54,5 @@
             "fileMatch": ["keymap.json"],
             "url": "./data/schemas/keymap.jsonschema"
         }
-    ]
+    ]   
 }
