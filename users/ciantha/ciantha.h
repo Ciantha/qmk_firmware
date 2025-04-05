@@ -1,3 +1,4 @@
+#include "quantum.h"
 //hrm
 #define HRM_Z RGUI_T(KC_Z)
 #define HRM_S LALT_T(KC_S)
@@ -16,6 +17,11 @@
 #define LT_A LT(NAV, KC_A)
 #define LT_BSPC LT(NUM, KC_BSPC)
 
+//tap dance names
+enum tap_dances{
+    CT_PLS,
+    CT_PRINT_RALT
+  };
 
 //portable keymaps
 //base

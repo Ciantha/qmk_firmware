@@ -18,6 +18,7 @@
 #include "ciantha.h"
 #include "key_overrides.h"
 
+
 //layer names
 enum layers{
   BASE,
@@ -33,11 +34,7 @@ enum custom_keycodes {
   KC_AA,
 };
 
-//tap dance names
-enum tap_dances{
-  CT_PLS,
-  CT_PRINT_RALT
-};
+
 
 //to set up tap hold tapdances
 typedef struct {
@@ -136,11 +133,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   }
 }
 
-//all tap dances
-tap_dance_action_t tap_dance_actions[] = {
-  [CT_PLS] = ACTION_TAP_DANCE_TAP_HOLD(KC_PLUS, KC_EQL),
-  [CT_PRINT_RALT] = ACTION_TAP_DANCE_FN(print_ralt)
-};
+#include "tap_dances.c"
 
 //process record user, creating of custom keycodes
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
