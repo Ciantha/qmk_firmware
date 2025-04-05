@@ -18,24 +18,6 @@
 #include "ciantha.h"
 #include "key_overrides.h"
 
-
-//layer names
-enum layers{
-  BASE,
-  NUM,
-  NAV,
-  META
-};
-
-//custom keycode names
-enum custom_keycodes {
-  KC_OE = SAFE_RANGE,
-  KC_AE,
-  KC_AA,
-};
-
-
-
 //to set up tap hold tapdances
 typedef struct {
   uint16_t tap;
