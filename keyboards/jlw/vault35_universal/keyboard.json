@@ -1,20 +1,9 @@
 {
-    "keyboard_name": "vault 35 HHKB universal",
     "manufacturer": "calvin the great",
-    "url": "https://github.com/calvin-mcd/universal-vault",
+    "keyboard_name": "vault 35 HHKB universal",
     "maintainer": "jlw",
-    "usb": {
-        "vid": "0x1209",
-        "pid": "0xA456",
-        "device_version": "0.0.1"
-    },
-    "processor": "STM32F072",
     "bootloader": "stm32-dfu",
     "diode_direction": "COL2ROW",
-    "matrix_pins": {
-        "cols": ["A0", "F1", "F0", "B9", "B8", "B7", "B6", "B5", "B4", "B3", "A15"],
-        "rows": ["B0", "A13", "A2", "A5"]
-    },
     "encoder": {
       "rotary": [
         {"pin_a": "B1", "pin_b": "B2"},
@@ -32,6 +21,11 @@
         "nkro": true,
         "rgb_matrix": true
     },
+    "matrix_pins": {
+        "cols": ["A0", "F1", "F0", "B9", "B8", "B7", "B6", "B5", "B4", "B3", "A15"],
+        "rows": ["B0", "A13", "A2", "A5"]
+    },
+    "processor": "STM32F072",
     "rgb_matrix": {
         "animations": {
             "alphas_mods": true,
@@ -78,6 +72,9 @@
             "splash": true,
             "typing_heatmap": true
         },
+        "driver": "ws2812",
+        "hue_steps": 4,
+        "max_brightness": 255,
         "layout": [
             {"flags": 4, "matrix": [0, 0], "x": 18, "y": 24},
             {"flags": 4, "matrix": [0, 2], "x": 51, "y": 24},
@@ -91,26 +88,29 @@
             {"flags": 4, "matrix": [2, 4], "x": 76, "y": 67},
             {"flags": 4, "matrix": [2, 2], "x": 51, "y": 67},
             {"flags": 4, "matrix": [2, 0], "x": 18, "y": 62}
-        ],
-        "driver": "ws2812",
-        "hue_steps": 4,
-        "max_brightness": 255,
-        "sat_steps": 4,
-        "val_steps": 4
+        ]
+    },
+    "sat_steps": 4,
+    "val_steps": 4,
+    "url": "https://github.com/calvin-mcd/universal-vault",
+    "usb": {
+        "vid": "0x1209",
+        "pid": "0xA456",
+        "device_version": "0.0.1"
     },
     "ws2812": {
-        "pin": "A1",
-        "driver": "bitbang"
+        "driver": "bitbang",
+        "pin": "A1"
     },
     "layouts": {
-        "LAYOUT_ortho": {                                  // cain bars
+        "LAYOUT_ortho": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}, // voak
+                {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
                 {"matrix": [0, 2], "x": 2, "y": 0},
                 {"matrix": [0, 3], "x": 3, "y": 0},
                 {"matrix": [0, 4], "x": 4, "y": 0},
-                {"matrix": [0, 5], "x": 5, "y": 0}, // voaut
+                {"matrix": [0, 5], "x": 5, "y": 0},
                 {"matrix": [0, 6], "x": 6, "y": 0},
                 {"matrix": [0, 7], "x": 7, "y": 0},
                 {"matrix": [0, 8], "x": 8, "y": 0},
@@ -122,7 +122,7 @@
                 {"matrix": [1, 2], "x": 2, "y": 1},
                 {"matrix": [1, 3], "x": 3, "y": 1},
                 {"matrix": [1, 4], "x": 4, "y": 1},
-                {"matrix": [1, 5], "x": 5, "y": 1}, // oa
+                {"matrix": [1, 5], "x": 5, "y": 1},
                 {"matrix": [1, 6], "x": 6, "y": 1},
                 {"matrix": [1, 7], "x": 7, "y": 1},
                 {"matrix": [1, 8], "x": 8, "y": 1},
@@ -134,7 +134,7 @@
                 {"matrix": [2, 2], "x": 2, "y": 2},
                 {"matrix": [2, 3], "x": 3, "y": 2},
                 {"matrix": [2, 4], "x": 4, "y": 2},
-                {"matrix": [2, 5], "x": 5, "y": 2}, // okt
+                {"matrix": [2, 5], "x": 5, "y": 2},
                 {"matrix": [2, 6], "x": 6, "y": 2},
                 {"matrix": [2, 7], "x": 7, "y": 2},
                 {"matrix": [2, 8], "x": 8, "y": 2},
@@ -148,9 +148,9 @@
                 {"matrix": [3, 9], "x": 8.25, "y": 3, "w": 1.25}
             ]
         },
-        "LAYOUT_row": {
+        "LAYOUT_row_cain_bars": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}, // voak
+                {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
                 {"matrix": [0, 2], "x": 2, "y": 0},
                 {"matrix": [0, 3], "x": 3, "y": 0},
@@ -177,28 +177,29 @@
                 {"matrix": [2, 1], "x": 1.75, "y": 2},
                 {"matrix": [2, 2], "x": 2.75, "y": 2},
                 {"matrix": [2, 3], "x": 3.75, "y": 2},
-                {"matrix": [2, 4], "x": 4.75, "y": 2},
+                {"matrix": [2, 5], "x": 4.75, "y": 2},
                 {"matrix": [2, 6], "x": 5.75, "y": 2},
                 {"matrix": [2, 7], "x": 6.75, "y": 2},
                 {"matrix": [2, 8], "x": 7.75, "y": 2},
                 {"matrix": [2, 9], "x": 8.75, "y": 2},
                 {"matrix": [2, 10], "x": 9.75, "y": 2, "w":1.75},
 
-                {"matrix": [3, 1], "x": 1.5, "y": 3, "w":1.25},
-                {"matrix": [3, 2], "x": 2.75, "y": 3, "w": 1.25},
-                {"matrix": [3, 5], "x": 4, "y": 3, "w": 3},
-                {"matrix": [3, 8], "x": 7, "y": 3, "w": 1.25},
-                {"matrix": [3, 9], "x": 8.25, "y": 3, "w": 1.25}
+                {"matrix": [3, 1], "x": 1.5, "y": 3},
+                {"matrix": [3, 2], "x": 2.5, "y": 3, "w": 1.25},
+                {"matrix": [3, 3], "x": 3.75, "y": 3, "w": 1.75},
+                {"matrix": [3, 6], "x": 5.5, "y": 3, "w": 1.75},
+                {"matrix": [3, 8], "x": 7.25, "y": 3, "w": 1.25},
+                {"matrix": [3, 9], "x": 8.5, "y": 3}
             ]
         },
         "LAYOUT_alpha": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}, // voak
+                {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
                 {"matrix": [0, 2], "x": 2, "y": 0},
                 {"matrix": [0, 3], "x": 3, "y": 0},
                 {"matrix": [0, 4], "x": 4, "y": 0},
-                {"matrix": [0, 5], "x": 5, "y": 0}, // voaut
+                {"matrix": [0, 5], "x": 5, "y": 0},
                 {"matrix": [0, 6], "x": 6, "y": 0},
                 {"matrix": [0, 7], "x": 7, "y": 0},
                 {"matrix": [0, 8], "x": 8, "y": 0},
@@ -210,7 +211,7 @@
                 {"matrix": [1, 2], "x": 2, "y": 1},
                 {"matrix": [1, 3], "x": 3, "y": 1},
                 {"matrix": [1, 4], "x": 4, "y": 1},
-                {"matrix": [1, 5], "x": 5, "y": 1}, // oa
+                {"matrix": [1, 5], "x": 5, "y": 1},
                 {"matrix": [1, 6], "x": 6, "y": 1},
                 {"matrix": [1, 7], "x": 7, "y": 1},
                 {"matrix": [1, 8], "x": 8, "y": 1},
@@ -264,7 +265,7 @@
                 {"matrix": [2, 2], "x": 2, "y": 2},
                 {"matrix": [2, 3], "x": 3, "y": 2},
                 {"matrix": [2, 4], "x": 4, "y": 2},
-                {"matrix": [2, 5], "x": 5, "y": 2}, // okt
+                {"matrix": [2, 5], "x": 5, "y": 2},
                 {"matrix": [2, 6], "x": 6, "y": 2},
                 {"matrix": [2, 7], "x": 7, "y": 2},
                 {"matrix": [2, 8], "x": 8, "y": 2},
@@ -306,7 +307,7 @@
                 {"matrix": [2, 2], "x": 2, "y": 2},
                 {"matrix": [2, 3], "x": 3, "y": 2},
                 {"matrix": [2, 4], "x": 4, "y": 2},
-                {"matrix": [2, 5], "x": 5, "y": 2}, // okt
+                {"matrix": [2, 5], "x": 5, "y": 2},
                 {"matrix": [2, 6], "x": 6, "y": 2},
                 {"matrix": [2, 7], "x": 7, "y": 2},
                 {"matrix": [2, 8], "x": 8, "y": 2},
@@ -322,12 +323,12 @@
         },
         "LAYOUT_uniform": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}, // voak
+                {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
                 {"matrix": [0, 2], "x": 2, "y": 0},
                 {"matrix": [0, 3], "x": 3, "y": 0},
                 {"matrix": [0, 4], "x": 4, "y": 0},
-                {"matrix": [0, 5], "x": 5, "y": 0}, // voaut
+                {"matrix": [0, 5], "x": 5, "y": 0},
                 {"matrix": [0, 6], "x": 6, "y": 0},
                 {"matrix": [0, 7], "x": 7, "y": 0},
                 {"matrix": [0, 8], "x": 8, "y": 0},
@@ -365,12 +366,12 @@
         },
         "LAYOUT_treadstone": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}, // voak
+                {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
                 {"matrix": [0, 2], "x": 2, "y": 0},
                 {"matrix": [0, 3], "x": 3, "y": 0},
                 {"matrix": [0, 4], "x": 4, "y": 0},
-                {"matrix": [0, 5], "x": 5, "y": 0}, // voaut
+                {"matrix": [0, 5], "x": 5, "y": 0},
                 {"matrix": [0, 6], "x": 6, "y": 0},
                 {"matrix": [0, 7], "x": 7, "y": 0},
                 {"matrix": [0, 8], "x": 8, "y": 0},
@@ -393,7 +394,7 @@
                 {"matrix": [2, 2], "x": 2, "y": 2},
                 {"matrix": [2, 3], "x": 3, "y": 2},
                 {"matrix": [2, 4], "x": 4, "y": 2},
-                {"matrix": [2, 5], "x": 5, "y": 2}, // okt
+                {"matrix": [2, 5], "x": 5, "y": 2},
                 {"matrix": [2, 6], "x": 6, "y": 2},
                 {"matrix": [2, 7], "x": 7, "y": 2},
                 {"matrix": [2, 8], "x": 8, "y": 2},
@@ -409,12 +410,12 @@
         },
         "LAYOUT_ortho_cain_bars": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}, // voak
+                {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
                 {"matrix": [0, 2], "x": 2, "y": 0},
                 {"matrix": [0, 3], "x": 3, "y": 0},
                 {"matrix": [0, 4], "x": 4, "y": 0},
-                {"matrix": [0, 5], "x": 5, "y": 0}, // voaut
+                {"matrix": [0, 5], "x": 5, "y": 0},
                 {"matrix": [0, 6], "x": 6, "y": 0},
                 {"matrix": [0, 7], "x": 7, "y": 0},
                 {"matrix": [0, 8], "x": 8, "y": 0},
@@ -426,7 +427,7 @@
                 {"matrix": [1, 2], "x": 2, "y": 1},
                 {"matrix": [1, 3], "x": 3, "y": 1},
                 {"matrix": [1, 4], "x": 4, "y": 1},
-                {"matrix": [1, 5], "x": 5, "y": 1}, // oa
+                {"matrix": [1, 5], "x": 5, "y": 1},
                 {"matrix": [1, 6], "x": 6, "y": 1},
                 {"matrix": [1, 7], "x": 7, "y": 1},
                 {"matrix": [1, 8], "x": 8, "y": 1},
@@ -438,7 +439,7 @@
                 {"matrix": [2, 2], "x": 2, "y": 2},
                 {"matrix": [2, 3], "x": 3, "y": 2},
                 {"matrix": [2, 4], "x": 4, "y": 2},
-                {"matrix": [2, 5], "x": 5, "y": 2}, // okt
+                {"matrix": [2, 5], "x": 5, "y": 2},
                 {"matrix": [2, 6], "x": 6, "y": 2},
                 {"matrix": [2, 7], "x": 7, "y": 2},
                 {"matrix": [2, 8], "x": 8, "y": 2},
@@ -455,12 +456,12 @@
         },
         "LAYOUT_ortho_2u_bars": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}, // voak
+                {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
                 {"matrix": [0, 2], "x": 2, "y": 0},
                 {"matrix": [0, 3], "x": 3, "y": 0},
                 {"matrix": [0, 4], "x": 4, "y": 0},
-                {"matrix": [0, 5], "x": 5, "y": 0}, // voaut
+                {"matrix": [0, 5], "x": 5, "y": 0},
                 {"matrix": [0, 6], "x": 6, "y": 0},
                 {"matrix": [0, 7], "x": 7, "y": 0},
                 {"matrix": [0, 8], "x": 8, "y": 0},
@@ -472,7 +473,7 @@
                 {"matrix": [1, 2], "x": 2, "y": 1},
                 {"matrix": [1, 3], "x": 3, "y": 1},
                 {"matrix": [1, 4], "x": 4, "y": 1},
-                {"matrix": [1, 5], "x": 5, "y": 1}, // oa
+                {"matrix": [1, 5], "x": 5, "y": 1},
                 {"matrix": [1, 6], "x": 6, "y": 1},
                 {"matrix": [1, 7], "x": 7, "y": 1},
                 {"matrix": [1, 8], "x": 8, "y": 1},
@@ -484,7 +485,7 @@
                 {"matrix": [2, 2], "x": 2, "y": 2},
                 {"matrix": [2, 3], "x": 3, "y": 2},
                 {"matrix": [2, 4], "x": 4, "y": 2},
-                {"matrix": [2, 5], "x": 5, "y": 2}, // okt
+                {"matrix": [2, 5], "x": 5, "y": 2},
                 {"matrix": [2, 6], "x": 6, "y": 2},
                 {"matrix": [2, 7], "x": 7, "y": 2},
                 {"matrix": [2, 8], "x": 8, "y": 2},
@@ -501,12 +502,12 @@
         },
         "LAYOUT_ortho_3u_bars": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}, // voak
+                {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
                 {"matrix": [0, 2], "x": 2, "y": 0},
                 {"matrix": [0, 3], "x": 3, "y": 0},
                 {"matrix": [0, 4], "x": 4, "y": 0},
-                {"matrix": [0, 5], "x": 5, "y": 0}, // voaut
+                {"matrix": [0, 5], "x": 5, "y": 0},
                 {"matrix": [0, 6], "x": 6, "y": 0},
                 {"matrix": [0, 7], "x": 7, "y": 0},
                 {"matrix": [0, 8], "x": 8, "y": 0},
@@ -518,7 +519,7 @@
                 {"matrix": [1, 2], "x": 2, "y": 1},
                 {"matrix": [1, 3], "x": 3, "y": 1},
                 {"matrix": [1, 4], "x": 4, "y": 1},
-                {"matrix": [1, 5], "x": 5, "y": 1}, // oa
+                {"matrix": [1, 5], "x": 5, "y": 1},
                 {"matrix": [1, 6], "x": 6, "y": 1},
                 {"matrix": [1, 7], "x": 7, "y": 1},
                 {"matrix": [1, 8], "x": 8, "y": 1},
@@ -530,7 +531,7 @@
                 {"matrix": [2, 2], "x": 2, "y": 2},
                 {"matrix": [2, 3], "x": 3, "y": 2},
                 {"matrix": [2, 4], "x": 4, "y": 2},
-                {"matrix": [2, 5], "x": 5, "y": 2}, // okt
+                {"matrix": [2, 5], "x": 5, "y": 2},
                 {"matrix": [2, 6], "x": 6, "y": 2},
                 {"matrix": [2, 7], "x": 7, "y": 2},
                 {"matrix": [2, 8], "x": 8, "y": 2},
@@ -545,12 +546,12 @@
         },
         "LAYOUT_ortho_6u_bar": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}, // voak
+                {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
                 {"matrix": [0, 2], "x": 2, "y": 0},
                 {"matrix": [0, 3], "x": 3, "y": 0},
                 {"matrix": [0, 4], "x": 4, "y": 0},
-                {"matrix": [0, 5], "x": 5, "y": 0}, // voaut
+                {"matrix": [0, 5], "x": 5, "y": 0},
                 {"matrix": [0, 6], "x": 6, "y": 0},
                 {"matrix": [0, 7], "x": 7, "y": 0},
                 {"matrix": [0, 8], "x": 8, "y": 0},
@@ -562,7 +563,7 @@
                 {"matrix": [1, 2], "x": 2, "y": 1},
                 {"matrix": [1, 3], "x": 3, "y": 1},
                 {"matrix": [1, 4], "x": 4, "y": 1},
-                {"matrix": [1, 5], "x": 5, "y": 1}, // oa
+                {"matrix": [1, 5], "x": 5, "y": 1},
                 {"matrix": [1, 6], "x": 6, "y": 1},
                 {"matrix": [1, 7], "x": 7, "y": 1},
                 {"matrix": [1, 8], "x": 8, "y": 1},
@@ -574,7 +575,7 @@
                 {"matrix": [2, 2], "x": 2, "y": 2},
                 {"matrix": [2, 3], "x": 3, "y": 2},
                 {"matrix": [2, 4], "x": 4, "y": 2},
-                {"matrix": [2, 5], "x": 5, "y": 2}, // okt
+                {"matrix": [2, 5], "x": 5, "y": 2},
                 {"matrix": [2, 6], "x": 6, "y": 2},
                 {"matrix": [2, 7], "x": 7, "y": 2},
                 {"matrix": [2, 8], "x": 8, "y": 2},
@@ -588,12 +589,12 @@
         },
         "LAYOUT_ortho_center_encoder": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}, // voak
+                {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
                 {"matrix": [0, 2], "x": 2, "y": 0},
                 {"matrix": [0, 3], "x": 3, "y": 0},
                 {"matrix": [0, 4], "x": 4, "y": 0},
-                {"matrix": [0, 5], "x": 5, "y": 0}, // voaut
+                {"matrix": [0, 5], "x": 5, "y": 0},
                 {"matrix": [0, 6], "x": 6, "y": 0},
                 {"matrix": [0, 7], "x": 7, "y": 0},
                 {"matrix": [0, 8], "x": 8, "y": 0},
@@ -605,7 +606,7 @@
                 {"matrix": [1, 2], "x": 2, "y": 1},
                 {"matrix": [1, 3], "x": 3, "y": 1},
                 {"matrix": [1, 4], "x": 4, "y": 1},
-                {"matrix": [1, 5], "x": 5, "y": 1}, // oa
+                {"matrix": [1, 5], "x": 5, "y": 1},
                 {"matrix": [1, 6], "x": 6, "y": 1},
                 {"matrix": [1, 7], "x": 7, "y": 1},
                 {"matrix": [1, 8], "x": 8, "y": 1},
@@ -617,7 +618,7 @@
                 {"matrix": [2, 2], "x": 2, "y": 2},
                 {"matrix": [2, 3], "x": 3, "y": 2},
                 {"matrix": [2, 4], "x": 4, "y": 2},
-                {"matrix": [2, 5], "x": 5, "y": 2}, // okt
+                {"matrix": [2, 5], "x": 5, "y": 2},
                 {"matrix": [2, 6], "x": 6, "y": 2},
                 {"matrix": [2, 7], "x": 7, "y": 2},
                 {"matrix": [2, 8], "x": 8, "y": 2},
@@ -635,12 +636,12 @@
         },
         "LAYOUT_ortho_1u_bottom": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}, // voak
+                {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
                 {"matrix": [0, 2], "x": 2, "y": 0},
                 {"matrix": [0, 3], "x": 3, "y": 0},
                 {"matrix": [0, 4], "x": 4, "y": 0},
-                {"matrix": [0, 5], "x": 5, "y": 0}, // voaut
+                {"matrix": [0, 5], "x": 5, "y": 0},
                 {"matrix": [0, 6], "x": 6, "y": 0},
                 {"matrix": [0, 7], "x": 7, "y": 0},
                 {"matrix": [0, 8], "x": 8, "y": 0},
@@ -652,7 +653,7 @@
                 {"matrix": [1, 2], "x": 2, "y": 1},
                 {"matrix": [1, 3], "x": 3, "y": 1},
                 {"matrix": [1, 4], "x": 4, "y": 1},
-                {"matrix": [1, 5], "x": 5, "y": 1}, // oa
+                {"matrix": [1, 5], "x": 5, "y": 1},
                 {"matrix": [1, 6], "x": 6, "y": 1},
                 {"matrix": [1, 7], "x": 7, "y": 1},
                 {"matrix": [1, 8], "x": 8, "y": 1},
@@ -664,7 +665,7 @@
                 {"matrix": [2, 2], "x": 2, "y": 2},
                 {"matrix": [2, 3], "x": 3, "y": 2},
                 {"matrix": [2, 4], "x": 4, "y": 2},
-                {"matrix": [2, 5], "x": 5, "y": 2}, // okt
+                {"matrix": [2, 5], "x": 5, "y": 2},
                 {"matrix": [2, 6], "x": 6, "y": 2},
                 {"matrix": [2, 7], "x": 7, "y": 2},
                 {"matrix": [2, 8], "x": 8, "y": 2},
@@ -683,12 +684,12 @@
         },
         "LAYOUT_ortho_225_275": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}, // voak
+                {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
                 {"matrix": [0, 2], "x": 2, "y": 0},
                 {"matrix": [0, 3], "x": 3, "y": 0},
                 {"matrix": [0, 4], "x": 4, "y": 0},
-                {"matrix": [0, 5], "x": 5, "y": 0}, // voaut
+                {"matrix": [0, 5], "x": 5, "y": 0},
                 {"matrix": [0, 6], "x": 6, "y": 0},
                 {"matrix": [0, 7], "x": 7, "y": 0},
                 {"matrix": [0, 8], "x": 8, "y": 0},
@@ -700,7 +701,7 @@
                 {"matrix": [1, 2], "x": 2, "y": 1},
                 {"matrix": [1, 3], "x": 3, "y": 1},
                 {"matrix": [1, 4], "x": 4, "y": 1},
-                {"matrix": [1, 5], "x": 5, "y": 1}, // oa
+                {"matrix": [1, 5], "x": 5, "y": 1},
                 {"matrix": [1, 6], "x": 6, "y": 1},
                 {"matrix": [1, 7], "x": 7, "y": 1},
                 {"matrix": [1, 8], "x": 8, "y": 1},
@@ -712,7 +713,7 @@
                 {"matrix": [2, 2], "x": 2, "y": 2},
                 {"matrix": [2, 3], "x": 3, "y": 2},
                 {"matrix": [2, 4], "x": 4, "y": 2},
-                {"matrix": [2, 5], "x": 5, "y": 2}, // okt
+                {"matrix": [2, 5], "x": 5, "y": 2},
                 {"matrix": [2, 6], "x": 6, "y": 2},
                 {"matrix": [2, 7], "x": 7, "y": 2},
                 {"matrix": [2, 8], "x": 8, "y": 2},
