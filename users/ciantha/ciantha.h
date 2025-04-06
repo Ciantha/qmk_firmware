@@ -54,6 +54,3 @@ enum tap_dances { CT_PLS, CT_PRINT_RALT };
 #define ___NAV_A_ROW_10u___ KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_END, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
 #define ___NAV_Z_ROW_10u___ KC_TRNS, CUT, COPY, PASTE, UNDO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, UG_TOGG
 #define ___NAV_THUMB_6___ KC_TRNS, KC_CAPS, KC_LBRC, KC_RBRC, KC_NUM, KC_TRNS
-
-// layout macros
-#define LAYOUT_ciantha_11u_6_thumb_keys(...) LAYOUT_split_4space(__VA_ARGS__)

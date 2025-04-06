@@ -18,6 +18,10 @@
 #include "ciantha.h"
 #include "key_overrides.h"
 
+
+// layout macro
+#define LAYOUT_ciantha_11u_6_thumb_keys(...) LAYOUT_split_4space(__VA_ARGS__)
+
 //set handedness for chordal hold
 const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
     LAYOUT_ciantha_11u_6_thumb_keys(
