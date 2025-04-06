@@ -18,15 +18,6 @@
 #include "ciantha.h"
 #include "key_overrides.h"
 
-//to set up tap hold tapdances
-typedef struct {
-  uint16_t tap;
-  uint16_t hold;
-  uint16_t held;
-} tap_dance_tap_hold_t;
-
-
-
 //set handedness for chordal hold
 const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
     LAYOUT_ciantha_11u_6_thumb_keys(
@@ -62,46 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 #include "encoder_map.h"
-
-void tap_dance_tap_hold_finished(tap_dance_state_t *state, void *user_data) {
-  tap_dance_tap_hold_t *tap_hold = (tap_dance_tap_hold_t *)user_data;
-
-  if (state->pressed) {
-      if (state->count == 1
-#ifndef PERMISSIVE_HOLD
-          && !state->interrupted
-#endif
-      ) {
-          register_code16(tap_hold->hold);
-          tap_hold->held = tap_hold->hold;
-      } else {
-          register_code16(tap_hold->tap);
-          tap_hold->held = tap_hold->tap;
-      }
-  }
-}
-
-void tap_dance_tap_hold_reset(tap_dance_state_t *state, void *user_data) {
-  tap_dance_tap_hold_t *tap_hold = (tap_dance_tap_hold_t *)user_data;
-
-  if (tap_hold->held) {
-      unregister_code16(tap_hold->held);
-      tap_hold->held = 0;
-  }
-}
-
-#define ACTION_TAP_DANCE_TAP_HOLD(tap, hold) \
-  { .fn = {NULL, tap_dance_tap_hold_finished, tap_dance_tap_hold_reset}, .user_data = (void *)&((tap_dance_tap_hold_t){tap, hold, 0}), }
-
-void print_ralt(tap_dance_state_t *state, void *user_data) {
-  if (state->count ==1) {
-      tap_code(KC_PSCR);
-  } else if (state->count ==2) {
-    set_oneshot_mods(MOD_BIT(KC_RALT));
-  } else {
-    clear_oneshot_mods();
-  }
-}
+#include "tap_dances.c"
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
@@ -111,8 +63,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
           return TAPPING_TERM;
   }
 }
-
-#include "tap_dances.c"
 
 //process record user, creating of custom keycodes
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
