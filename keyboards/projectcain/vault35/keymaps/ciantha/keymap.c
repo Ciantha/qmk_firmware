@@ -90,12 +90,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         unregister_code(KC_RALT);
     } 
     break;
+    #ifdef TAP_DANCE_ENABLE
     case TD(CT_PLS):  // list all tap dance keycodes with tap-hold configurations
     action = &tap_dance_actions[QK_TAP_DANCE_GET_INDEX(keycode)];
     if (!record->event.pressed && action->state.count && !action->state.finished) {
         tap_dance_tap_hold_t *tap_hold = (tap_dance_tap_hold_t *)action->user_data;
         tap_code16(tap_hold->tap);
     }
+    #endif
   }
   return true;
 };
