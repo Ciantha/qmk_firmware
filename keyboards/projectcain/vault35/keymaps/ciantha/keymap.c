@@ -57,8 +57,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
+    #ifdef TAP_DANCE_ENABLE
       case TD(CT_PRINT_RALT):
           return 200;
+          #endif
       default:
           return TAPPING_TERM;
   }
