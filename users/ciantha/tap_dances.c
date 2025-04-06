@@ -53,3 +53,14 @@ tap_dance_action_t tap_dance_actions[] = {
     [CT_PRINT_RALT] = ACTION_TAP_DANCE_FN(print_ralt)
   };
   #endif
+
+  uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+      #ifdef TAP_DANCE_ENABLE
+        case TD(CT_PRINT_RALT):
+            return 200;
+            #endif
+        default:
+            return TAPPING_TERM;
+    }
+  }
