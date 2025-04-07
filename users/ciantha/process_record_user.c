@@ -1,6 +1,8 @@
 //process record user, creating of custom keycodes
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    tap_dance_action_t *action;
+  #ifdef TAP_DANCE_ENABLE  
+  tap_dance_action_t *action;
+  #endif
   
     switch (keycode) {
       case KC_OE:
