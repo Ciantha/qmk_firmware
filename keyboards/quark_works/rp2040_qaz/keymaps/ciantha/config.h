@@ -1,0 +1,9 @@
+#pragma once
+
+#define COMBO_TERM 30
+#define QUICK_TAP_TERM 120
+#define TAPPING_TERM 145
+#define TAPPING_TERM_PER_KEY
+#define CHORDAL_HOLD
+#define PERMISSIVE_HOLD
+#define CAPS_WORD_INVERT_ON_SHIFT
