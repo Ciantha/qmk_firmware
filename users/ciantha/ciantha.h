@@ -34,6 +34,7 @@ enum tap_dances { CT_PLS, CT_PRINT_RALT };
 // chordal hold
 #define ___CHORDAL_11u6t_stag___ 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'R', '*', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', '*', '*', '*', '*', '*', '*'
 #define ___CHORDAL_10_25u6t_stag___ 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', '*', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', '*', '*', '*', '*', '*', '*'
+#define ___CHORDAL_SCANDIVAN___ 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', '*', '*', '*', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', '*', '*', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*' 
 
 // base
 #define ___BASE_Q_ROW_11u___ KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_NO
