@@ -37,6 +37,7 @@ enum tap_dances { CT_PLS, CT_PRINT_RALT };
 #define ___CHORDAL_SCANDIVAN___ 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', '*', '*', '*', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', '*', '*', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*' 
 
 // base
+#define ___BASE_ORACLE_9_keys___ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F4
 #define ___BASE_Q_ROW_11u___ KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_NO
 #define ___BASE_Q_ROW_10u___ KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P
 #define ___BASE_A_ROW_10u___ LT_A, HRM_S, HRM_D, HRM_F, KC_G, KC_H, HRM_J, HRM_K, HRM_L, KC_OE
@@ -45,6 +46,7 @@ enum tap_dances { CT_PLS, CT_PRINT_RALT };
 #define ___BASE_THUMB_6___ KC_LCTL, KC_LALT, LT_BSPC, KC_SPACE, TD(CT_PRINT_RALT), KC_LGUI
 
 // num
+#define ___NUM_ORACLE_9_keys___ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_F5, KC_F6, KC_F7, KC_F8
 #define ___NUM_Q_ROW_11u___ KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_GRV, KC_BSLS, KC_NO
 #define ___NUM_Q_ROW_10u___ KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_GRV, KC_BSLS
 #define ___NUM_A_ROW_10u___ KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0
@@ -53,6 +55,7 @@ enum tap_dances { CT_PLS, CT_PRINT_RALT };
 #define ___NUM_THUMB_6___ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
 
 // nav
+#define ___NAV_ORACLE_9_keys___ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,KC_F9, KC_F10, KC_F11, KC_F12
 #define ___NAV_Q_ROW_11u___ KC_TRNS, KC_TRNS, KC_UP, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, QK_BOOT
 #define ___NAV_Q_ROW_10u___ KC_TRNS, KC_TRNS, KC_UP, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, QK_BOOT
 #define ___NAV_A_ROW_10u___ KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_END, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
