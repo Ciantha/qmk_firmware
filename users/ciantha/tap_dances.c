@@ -60,6 +60,10 @@ tap_dance_action_t tap_dance_actions[] = {
         case TD(CT_PRINT_RALT):
             return 200;
             #endif
+        case HRM_D:
+            return 135;
+        case HRM_K:
+            return 135;
         default:
             return TAPPING_TERM;
     }
