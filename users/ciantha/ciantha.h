@@ -33,6 +33,7 @@ enum tap_dances { CT_PLS, CT_PRINT_RALT };
 // portable keymaps
 // chordal hold
 #define ___CHORDAL_11u6t_stag___ 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'R', '*', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', '*', '*', '*', '*', '*', '*'
+#define ___CHORDAL_11u4t_stag___ 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'R', '*', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', '*', '*', '*', '*'
 #define ___CHORDAL_10_25u6t_stag___ 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', '*', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', '*', '*', '*', '*', '*', '*'
 #define ___CHORDAL_SCANDIVAN___ 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', '*', '*', '*', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', '*', '*', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*' 
 
@@ -44,6 +45,7 @@ enum tap_dances { CT_PLS, CT_PRINT_RALT };
 #define ___BASE_Z_ROW_10u___ HRM_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, HRM_DOT, KC_NO
 #define ___BASE_Z_ROW_9u___ HRM_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, HRM_DOT
 #define ___BASE_THUMB_6___ KC_LCTL, KC_LALT, LT_BSPC, KC_SPACE, TD(CT_PRINT_RALT), KC_LGUI
+#define ___BASE_THUMB_4___ KC_LALT, LT_BSPC, KC_SPACE, TD(CT_PRINT_RALT)
 
 // num
 #define ___NUM_ORACLE_9_keys___ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_F5, KC_F6, KC_F7, KC_F8
@@ -53,6 +55,7 @@ enum tap_dances { CT_PLS, CT_PRINT_RALT };
 #define ___NUM_Z_ROW_10u___ KC_MINS, KC_UNDS, KC_LT, KC_LPRN, KC_LCBR, KC_RCBR, KC_RPRN, KC_GT, TD(CT_PLS), KC_NO
 #define ___NUM_Z_ROW_9u___ KC_MINS, KC_UNDS, KC_LT, KC_LPRN, KC_LCBR, KC_RCBR, KC_RPRN, KC_GT, TD(CT_PLS)
 #define ___NUM_THUMB_6___ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+#define ___NUM_THUMB_4___ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
 
 // nav
 #define ___NAV_ORACLE_9_keys___ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,KC_F9, KC_F10, KC_F11, KC_F12
@@ -62,3 +65,4 @@ enum tap_dances { CT_PLS, CT_PRINT_RALT };
 #define ___NAV_Z_ROW_10u___ KC_TRNS, CUT, COPY, PASTE, UNDO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, UG_TOGG
 #define ___NAV_Z_ROW_9u___ KC_TRNS, CUT, COPY, PASTE, UNDO, KC_TRNS, KC_TRNS, KC_TRNS, UG_TOGG
 #define ___NAV_THUMB_6___ KC_TRNS, KC_CAPS, KC_LBRC, KC_RBRC, KC_NUM, KC_TRNS
+#define ___NAV_THUMB_4___ KC_CAPS, KC_LBRC, KC_RBRC, KC_NUM
